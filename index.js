@@ -12,8 +12,10 @@ $(function() {
     var date = new Date();
     var todayDate = `${date.getMonth() > 10 ? date.getMonth() : "0"+date.getMonth() }/${date.getDate() > 10?date.getDate(): "0"+date.getDate()}/${date.getFullYear().toString().slice(-2)}`
 
+    // to Today's date
     inputDate.val(todayDate);
 
+    // Copy Functions
     btnReportDaily.click(function (e) { 
         e.preventDefault();
         
@@ -33,6 +35,7 @@ $(function() {
         navigator.clipboard.writeText(getText);
     });
 
+    // button copied animation
    $('.button-text').on('click', function(){
         $(this).addClass('show');
 
