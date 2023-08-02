@@ -7,10 +7,11 @@ $(function() {
     var inputResult = $('#result');
     var inputProject = $("#project");
     var inputTestSite = $('#testsite');
+    var inputInstruction = $('#instruction');
     var inputRemarks = $('#remarks');
     // Date
     var date = new Date();
-    var todayDate = `${date.getMonth() > 10 ? date.getMonth() : "0"+date.getMonth() }/${date.getDate() > 10?date.getDate(): "0"+date.getDate()}/${date.getFullYear().toString().slice(-2)}`
+    var todayDate = `${date.getMonth() > 10 ? 1 + date.getMonth() : "0"+(1 + date.getMonth()) }/${date.getDate() > 10?date.getDate(): "0"+date.getDate()}/${date.getFullYear().toString().slice(-2)}`
 
     // to Today's date
     inputDate.val(todayDate);
@@ -30,6 +31,7 @@ $(function() {
         
         var getText = `[info](lightbulb)Completion Report[/info]\n[Project]\n${inputProject.val()}
         \n[Test site]\n${inputTestSite.val()}
+        \n[Instruction]\n${inputInstruction.val()}
         \n[Remarks]\n${inputRemarks.val()}`;
 
         navigator.clipboard.writeText(getText);

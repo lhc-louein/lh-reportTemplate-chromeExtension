@@ -1,0 +1,20 @@
+{
+    // Required
+    "manifest_version": 3,
+    "name": "Report Template",
+    "description": "A report template",
+    "version": "1.0.1",
+    "icons":{
+      "16":"/images/icon.png",
+      "48":"/images/icon.png",
+      "128":"/images/icon.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Report Template",
+        "default_icon": "./images/icon.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' "
+     }
+}

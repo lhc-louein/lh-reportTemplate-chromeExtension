@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+    connect-src * data: blob: filesystem:;
+    img-src 'self' data:;
+    frame-src 'self' data:;
+    font-src 'self' data:;
+    media-src * data: blob: filesystem:;">
     <title>LH-Format</title>
     <link rel="stylesheet" href="/css/index.css">
 </head>
@@ -17,7 +23,7 @@
                             <input type="text" name="date" id="date" class="input-text" disabled>
                         </label>
                         <label for="result" class="label">
-                            <textarea name="result" id="result" rows="10" class="input-textarea"></textarea>
+                            <textarea name="result" id="result" rows="15" class="input-textarea"></textarea>
                         </label>
                     </div>
                     <button class="button" id="btnReportDaily"><span class="button-text">Copy</span></button>
@@ -32,18 +38,22 @@
                         </label>
                         <label for="testsite" class="label">
                             <span class="label-txt">[Test site]</span>
-                            <input type="text" name="testsite" id="testsite" class="input-text">
+                            <textarea name="testsite" id="testsite" rows="5" class="input-textarea"></textarea>
+                        </label>
+                        <label for="instruction" class="label">
+                            <span class="label-txt">[Instruction]</span>
+                            <textarea name="instruction" id="instruction" rows="5" class="input-textarea"></textarea>
                         </label>
                         <label for="remarks" class="label">
                             <span class="label-txt">[Remarks]</span>
-                            <input type="text" name="remarks" id="remarks" class="input-text">
+                            <textarea name="remarks" id="remarks" rows="5" class="input-textarea"></textarea>
                         </label>
                     </div>
                     <button class="button" id="btnReportProject"><span class="button-text">Copy</span></button>
                 </fieldset>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="./jquery-3.6.4.min.js"></script>
         <script src="./index.js"></script>
     </body>
 </html>
